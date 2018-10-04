@@ -1,0 +1,50 @@
+body, html {
+    height: 100%;
+}
+
+.button {
+  background-color: #048406;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  
+  position: fixed;
+  top: 70%;
+  left: 5%;
+}
+
+.button:hover {opacity: 1}
+
+#openingPage { 
+    /* The image used */
+    background-image: url("Us.jpg");
+
+    /* Full height */
+    height: 100%; 
+    width: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-size: cover;
+}
+
+body {
+  background: #333;
+  padding-top: 3em;
+  justify-content: center;
+}
+
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  letter-spacing: .15em; /* Adjust as needed */
+  padding-bottom: .5em;
+}

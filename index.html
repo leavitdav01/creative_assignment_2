@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Creative Assignment 2</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+    <script type="text/javascript" src="jss.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    
+
+    
+    <script>
+    $(document).ready(function(){
+        $("#theButton").click(function(e){
+            var myurl = "https://api.chucknorris.io/jokes/random";
+            $.ajax({
+                url: myurl,
+                dataType: "json",
+                success: function(data) {
+                    var words = data['value'];
+                    var everything = words;
+                    console.log(everything);
+                    $("#theWords").html(words);
+                    document.getElementById("openingPage").style.backgroundImage = "url('https://i.etsystatic.com/9239628/r/il/9fb3cb/1122850264/il_570xN.1122850264_gwla.jpg')";
+                    document.getElementById("openingPage").style.backgroundSize = "auto";
+                }
+            });
+        });
+    });
+    </script>
+<link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet" type="text/css"/></head>
+<body>
+    <div class="typewriter">
+        <h1 id="theWords">
+            This is my beautiful wife :)
+        </h1>
+        <input class="button" type="button" id="theButton" value="Don't Click Me" onclick="chuck()">
+    </div>
+    <div id="openingPage"></div>
+</body>
+</html>
+
